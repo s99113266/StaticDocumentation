@@ -1,0 +1,230 @@
+﻿@charset "UTF-8";
+:root {
+    --fd-row: row;
+    --fd-column: column;
+    --pct100:100%;
+    --pct90:90%;
+    --maxvw:1340px;
+    --minvw:200px;
+    --m0-a:0 auto;
+    --body-color1:#f1f1f1;
+}
+* {
+    font-family: 微軟正黑體,"Microsoft JhengHei", Arial, "Lucida Family";
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    word-break: break-all;
+    text-justify: inter-ideograph;
+    -ms-text-justify: inter-ideograph;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -webkit-overflow-scrolling: touch;
+}
+html, body {
+    width: var(--pct100);
+    height: var(--pct100);
+    margin: 0;
+    scroll-behavior: smooth;
+    padding-top: constant(safe-area-inset-top);
+    padding-right: constant(safe-area-inset-right);
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-left: constant(safe-area-inset-left);
+}
+.PagePct100 {
+    width: var(--pct100);
+    min-width: var(--minvw);
+    margin: var(--m0-a);
+}
+.PageMaxWidth {
+    width: var(--pct100);
+    max-width: var(--maxvw);
+    min-width: var(--minvw);
+    margin: var(--m0-a);
+}
+a, img {
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0;
+    border: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+p, h1, h2, h3, h4, h5, h6, hr {
+    padding: 0;
+    margin: 0;
+}
+button {
+    text-align: center;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+}
+form {
+    margin: 0;
+}
+input, button, textarea, select {
+    resize:none;
+    outline: none;
+    -moz-appearance: none; /*Removes default style Firefox*/
+    -webkit-appearance: none;
+    -webkit-user-select: text !important;
+}
+input[type=checkbox]{
+    -moz-appearance: checkbox; /*Removes default style Firefox*/
+    -webkit-appearance: checkbox;
+}
+
+iframe {
+    display: none;
+}
+form,input[type=text], input[type=password], button {
+    border: 0;
+}
+select::-ms-expand {
+    display: none;
+}
+.FDRow, .FDColumn, .FDRowRwd, .FDColumnRwd, .dpflex {
+    display: -webkit-flex;
+    display: flex;
+}
+.FDRow {
+    -webkit-flex-direction: var(--fd-row);
+    -ms-flex-direction: var(--fd-row);
+    flex-direction: var(--fd-row);
+}
+.FDColumn {
+    -webkit-flex-direction: var(--fd-column);
+    -ms-flex-direction: var(--fd-column);
+    flex-direction: var(--fd-column);
+}
+.FDRowRwd {
+    -webkit-flex-direction: var(--fd-row);
+    -ms-flex-direction: var(--fd-row);
+    flex-direction: var(--fd-row);
+}
+.FDColumnRwd {
+    -webkit-flex-direction: var(--fd-column);
+    -ms-flex-direction: var(--fd-column);
+    flex-direction: var(--fd-column);
+}
+.flexNone {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+}
+.flex_1{
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.flexNoneRwd {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+}
+.flex_1Rwd {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.jfc_center {
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.jfc_f_start {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.jfc_f_end {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.jfc_s_around {
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+}
+.jfc_s_between {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+.ai_center {
+    -webkit-align-items: center;
+    align-items: center;
+}
+.ai_f_start {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+.ai_f_end {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+.ai_stretch {
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+.ai_baseline {
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+.pos_r{
+    position:relative;
+}
+.pos_a {
+    position: absolute;
+}
+.pos_f {
+    position: fixed;
+}
+.pos_s {
+    position: sticky;
+    position: -webkit-sticky;
+}
+.c_pointer {
+    cursor: pointer;
+}
+.dpNone {
+    display: none;
+}
+.ovf_auto{
+    overflow:auto;
+}
+.ovf_hidden {
+    overflow: hidden;
+}
+.u_select_none {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.Resize_both {
+    resize: both;
+}
+.Resize_horizontal {
+    resize: horizontal;
+}
+.Resize_vertical {
+    resize: vertical;
+}
+.css_table {
+    display: table;
+}
+
+.css_tr {
+    display: table-row;
+}
+
+.css_td {
+    display: table-cell;
+}
