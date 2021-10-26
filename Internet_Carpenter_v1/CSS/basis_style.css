@@ -50,6 +50,9 @@ a, img {
     padding: 0;
     border: 0;
 }
+a {
+    vertical-align: bottom;
+}
 
 ul, li {
     padding: 0;
@@ -227,4 +230,7 @@ select::-ms-expand {
 
 .css_td {
     display: table-cell;
+}
+.txtA_Center {
+    text-align:center;
 }
