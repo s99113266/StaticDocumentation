@@ -25,7 +25,7 @@
 }
 html, body {
     width: var(--pct100);
-    height: var(--pct100);
+    min-height: var(--pct100);
     margin: 0;
     scroll-behavior: smooth;
     padding-top: constant(safe-area-inset-top);
