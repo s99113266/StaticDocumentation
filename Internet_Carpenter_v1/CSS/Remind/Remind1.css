@@ -1,4 +1,11 @@
-﻿.RemindBackground {
+﻿/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+.RemindBackground {
     background-color: rgb(0 0 0 / 0.70);
     top: -100px;
     left: -100px;
@@ -14,13 +21,16 @@
     max-height: 250px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     z-index: 1001;
 }
 .RemindText {
     background-color: #fff;
     border-radius: 20px;
-    box-shadow: 0 0 8px 1px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0 0 8px 1px rgba(0,0,0,0.7);
+            box-shadow: 0 0 8px 1px rgba(0,0,0,0.7);
 }
     .RemindText > div {
         width: 100%;
@@ -39,10 +49,13 @@
     font-weight: 900;
     background-color: #fff;
     border-radius: 100px;
-    box-shadow: 0 0 3px 1px rgba(0,0,0,0.7);
+    -webkit-box-shadow: 0 0 3px 1px rgba(0,0,0,0.7);
+            box-shadow: 0 0 3px 1px rgba(0,0,0,0.7);
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 1003;
 }
 .RemindNO {
