@@ -1,0 +1,428 @@
+/*-----Flexbox 佈局設定-----*/
+
+/*-----舊時代純 display:box; 排列-----*/
+.BoxParent,
+.Flex-Box-Parent {
+    /*特性會填滿*/
+    display: -webkit-box;
+    display: -moz-box;
+}
+
+.BoxParent-inline,
+.Flex-Box-Parent-inline {
+    /*特性不會填滿，以最小長寬*/
+    display: -moz-inline-box;
+    display: -webkit-inline-box;
+}
+
+.Box-Orient-horizontal,
+.FB-DO-rh {
+    /*橫向排列*/
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+}
+
+.Box-Orient-vertical,
+.FB-DO-cv {
+    /*縱向排列*/
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+}
+
+.Box-Orient-horizontal-r,
+.FB-DO-rh-r {
+    /*橫向排列 (反向)*/
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -webkit-box-direction: reverse;
+}
+
+.Box-Orient-vertical-r,
+.FB-DO-cv-r {
+    /*縱向排列 (反向)*/
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -webkit-box-direction: reverse;
+}
+
+.Box-Align-s,
+.FB-ACA-s {
+    /*垂直頂部對齊*/
+    -moz-box-align: start;
+    -webkit-box-align: start;
+}
+
+.Box-Align-e,
+.FB-ACA-e {
+    /*垂直底部對齊*/
+    -moz-box-align: end;
+    -webkit-box-align: end;
+}
+
+.Box-Align-c,
+.FB-ACA-c {
+    /*垂直居中對齊*/
+    -moz-box-align: center;
+    -webkit-box-align: center;
+}
+
+.Box-Align-stretch {
+    /*與父級的高度一致，子height無效*/
+    -moz-box-align: stretch;
+    -webkit-box-align: stretch;
+}
+
+.Box-Pack-s,
+.FB-JCP-s {
+    /*水平左對齊*/
+    -moz-box-pack: start;
+    -webkit-box-pack: start;
+}
+
+.Box-Pack-e,
+.FB-JCP-e {
+    /*水平右對齊*/
+    -moz-box-pack: end;
+    -webkit-box-pack: end;
+}
+
+.Box-Pack-c,
+.FB-JCP-c {
+    /*水平居中對齊*/
+    -moz-box-pack: center;
+    -webkit-box-pack: center;
+}
+
+.Box-Pack-j {
+    /*水平居中對齊*/
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+}
+
+.BoxItme-Flex-1,
+.FB-fbf-1 {
+    /*排列 1 等分*/
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+}
+
+
+
+/*
+=========================================================
+=========================================================
+*/
+
+
+/*-----新瀏覽器全支援 display:flex;-----*/
+.FlexParent,
+.Flex-Box-Parent {
+    /*特性會填滿*/
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+
+.Flex-inline,
+.Flex-Box-Parent-inline {
+    /*特性不會填滿，以最小長寬*/
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+}
+
+.Flex-Direction-column,
+.FB-DO-cv {
+    /*縱向排列*/
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.Flex-Direction-column-r,
+.FB-DO-cv-r {
+    /*縱向排列 (反向)*/
+    flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    -webkit-flex-direction: column-reverse;
+}
+
+.Flex-Direction-row,
+.FB-DO-rh {
+    /*橫向排列*/
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -moz-flex-direction: row;
+    -webkit-flex-direction: row;
+}
+
+.Flex-Direction-row-r,
+.FB-DO-rh-r {
+    /*橫向排列 (反向)*/
+    flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -webkit-flex-direction: row-reverse;
+}
+
+.Flex-Wrap-w {
+    /*換行*/
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.Flex-Wrap-wr {
+    /*換行 (反向)*/
+    flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    -moz-flex-wrap: wrap-reverse;
+    -webkit-flex-wrap: wrap-reverse;
+}
+
+.Flex-Wrap-nw {
+    /*不換行*/
+    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    -moz-flex-wrap: nowrap;
+    -webkit-flex-wrap: nowrap;
+}
+
+.Flex-Flow-cw {
+    /*縱向、換行*/
+    flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    -moz-flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+}
+
+.Flex-Flow-cr-w {
+    /*縱向 (反向)、換行*/
+    flex-flow: column-reverse wrap;
+    -ms-flex-flow: column-reverse wrap;
+    -moz-flex-flow: column-reverse wrap;
+    -webkit-flex-flow: column-reverse wrap;
+}
+
+.Flex-Flow-c-wr {
+    /*縱向、換行 (反向)*/
+    flex-flow: column wrap-reverse;
+    -ms-flex-flow: column wrap-reverse;
+    -moz-flex-flow: column wrap-reverse;
+    -webkit-flex-flow: column wrap-reverse;
+}
+
+.Flex-Flow-cr-wr {
+    /*縱向 (反向)、換行 (反向)*/
+    flex-flow: column-reverse wrap-reverse;
+    -ms-flex-flow: column-reverse wrap-reverse;
+    -moz-flex-flow: column-reverse wrap-reverse;
+    -webkit-flex-flow: column-reverse wrap-reverse;
+}
+
+.Flex-Flow-c-nw {
+    /*縱向、不換行*/
+    flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    -moz-flex-flow: column wrap;
+    -webkit-flex-flow: column nowrap;
+}
+
+.Flex-Flow-cr-nw {
+    /*縱向 (反向)、不換行*/
+    flex-flow: column-reverse nowrap;
+    -ms-flex-flow: column-reverse nowrap;
+    -moz-flex-flow: column-reverse nowrap;
+    -webkit-flex-flow: column-reverse nowrap;
+}
+
+.Flex-Flow-rw {
+    /*橫向、換行*/
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+}
+
+.Flex-Flow-rr-w {
+    /*橫向 (反向)、換行*/
+    flex-flow: row-reverse wrap;
+    -ms-flex-flow: row-reverse wrap;
+    -moz-flex-flow: row-reverse wrap;
+    -webkit-flex-flow: row-reverse wrap;
+}
+
+.Flex-Flow-r-wr {
+    /*橫向、換行 (反向)*/
+    flex-flow: row wrap-reverse;
+    -ms-flex-flow: row wrap-reverse;
+    -moz-flex-flow: row wrap-reverse;
+    -webkit-flex-flow: row wrap-reverse;
+}
+
+.Flex-Flow-rr-wr {
+    /*橫向 (反向)、換行 (反向)*/
+    flex-flow: row-reverse wrap-reverse;
+    -ms-flex-flow: row-reverse wrap-reverse;
+    -moz-flex-flow: row-reverse wrap-reverse;
+    -webkit-flex-flow: row-reverse wrap-reverse;
+}
+
+.Flex-Flow-r-nw {
+    /*橫向、不換行*/
+    flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    -moz-flex-flow: row wrap;
+    -webkit-flex-flow: row nowrap;
+}
+
+.Flex-Flow-rr-nw {
+    /*橫向 (反向)、不換行*/
+    flex-flow: row-reverse nowrap;
+    -ms-flex-flow: row-reverse nowrap;
+    -moz-flex-flow: row-reverse nowrap;
+    -webkit-flex-flow: row-reverse nowrap;
+}
+
+.Flex-JC-c,
+.FB-JCP-c {/*水平置中*/
+    justify-content: center;
+    -ms-flex-pack: center;
+}
+
+.Flex-JC-s,
+.FB-JCP-s {/*水平起始對齊*/
+    justify-content: flex-start;
+    -ms-flex-pack: start;
+}
+
+.Flex-JC-e,
+.FB-JCP-e {/*水平結尾對齊*/
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+}
+
+.Flex-JC-sa {
+    justify-content: space-around;
+    -ms-flex-pack: distribute;
+}
+
+.Flex-JC-sb {
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+}
+
+.Flex-JI-c {/*水平置中*/
+    justify-items: center;
+}
+
+.Flex-JI-s {/*水平起始對齊*/
+    justify-items: flex-start;
+}
+
+.Flex-JI-e {/*水平結尾對齊*/
+    justify-items: flex-end;
+}
+
+.Flex-JI-stretch {
+    justify-items: stretch;
+}
+
+.Flex-JS-c {/*水平置中*/
+    justify-self: center;
+    -ms-grid-column-align: center;
+}
+
+.Flex-JS-s {/*水平起始對齊*/
+    justify-self: flex-start;
+}
+
+.Flex-JS-e {/*水平結尾對齊*/
+    justify-self: flex-end;
+}
+
+.Flex-AC-c,
+.FB-ACA-c {/*垂直置中*/
+    align-content: center;
+    -ms-flex-line-pack: center;
+    -ms-flex-align: center;
+}
+
+.Flex-AC-s,
+.FB-ACA-s {
+    align-content: flex-start;
+    -ms-flex-line-pack: start;
+    -ms-flex-align: start;
+}
+
+.Flex-AC-e,
+.FB-ACA-e {
+    align-content: flex-end;
+    -ms-flex-line-pack: end;
+    -ms-flex-align: end;
+}
+
+.Flex-AC-sa {
+    align-content: space-around;
+    -ms-flex-line-pack: distribute;
+}
+
+.Flex-AC-sb {
+    align-content: space-between;
+    -ms-flex-line-pack: justify;
+}
+
+.Flex-AC-stretch {
+    align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    -ms-flex-align: stretch;
+}
+
+.Flex-AI-c {/*垂直置中*/
+    align-items: center;
+    -ms-flex-align: center;
+    -ms-flex-item-align: center;
+}
+
+.Flex-AI-s {
+    align-items: flex-start;
+    -ms-flex-align: start;
+    -ms-flex-item-align: start;
+}
+
+.Flex-AI-e {
+    align-items: flex-end;
+    -ms-flex-align: end;
+    -ms-flex-item-align: end;
+}
+
+.Flex-AI-b {
+    align-items: baseline;
+    -ms-flex-align: baseline;
+    -ms-flex-item-align: baseline;
+}
+
+.Flex-AS-c {/*垂直置中*/
+    align-self: center;
+    -ms-grid-row-align: center;
+}
+
+.Flex-AS-s {
+    align-self: flex-start;
+    -ms-flex-item-align: start;
+}
+
+.Flex-AS-e {
+    align-self: flex-end;
+    -ms-flex-item-align: end;
+}
+.Flex-flex-1,
+.FB-fbf-1{
+    flex:1;
+    -ms-flex: 1;
+}
