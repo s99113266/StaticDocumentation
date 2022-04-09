@@ -1,0 +1,147 @@
+@import url("./FlexboxFramework.css");
+/*物件初始化*/
+*,*::before,*::after {
+    font-family: 微軟正黑體,"Microsoft JhengHei", Arial, "Lucida Family";
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+    white-space:normal;
+
+    word-break: break-all;
+    -ms-word-break: break-all;
+
+    text-justify: inter-ideograph;
+    -ms-text-justify: inter-ideograph;
+
+    
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+
+    scroll-behavior: smooth;
+    
+    -webkit-overflow-scrolling: touch;
+
+}
+
+html,body{
+    min-width: 100%;
+    min-height:100%;
+    padding:0;
+    margin:0;
+    padding:constant(safe-area-inset-top) constant(safe-area-inset-right) constant(safe-area-inset-bottom) constant(safe-area-inset-left);
+}
+a, img {
+    text-decoration: none;
+    vertical-align: middle;
+}
+a {
+    vertical-align: bottom;
+}
+a,img,ul, li, p, h1, h2, h3, h4, h5, h6, hr, form,dl,dt,dd{
+    padding: 0;
+    border: 0;
+}
+ul, li{
+    list-style-type: none;
+}
+form,input[type=text], input[type=password], button {
+    border: 0;
+}
+input, button, textarea, select {
+    resize:none;
+    outline: none;
+    -moz-appearance: none; /*Removes default style Firefox*/
+    -webkit-appearance: none;
+    -webkit-user-select: text !important;
+}
+input[type=checkbox]{
+    -moz-appearance: checkbox; /*Removes default style Firefox*/
+    -webkit-appearance: checkbox;
+}
+select::-ms-expand {
+    display: none;
+}
+button,input[type=button],input[type=reset],input[type=submit]{
+    text-align: center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+}
+.Position-r{
+    position: relative;
+}
+.Position-a{
+    position: absolute;
+}
+.Position-f{
+    position: fixed;
+}
+.Position-s{
+    position: sticky;
+    position: -webkit-sticky;
+}
+.UserSelect-n{/*禁止選取反白*/
+    user-select:none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.Overflow-a, .Resize-b, .Resize-h, .Resize-v{
+    overflow: auto;
+}
+.Overflow-h,.t-exceed{
+    overflow: hidden;
+}
+.Resize-b{/*重新調整尺忖*/
+    resize: both;
+    -moz-resize: both;
+}
+.Resize-h{/*重新調整尺忖 (水平)*/
+    resize: horizontal;
+    -moz-resize: horizontal;
+}
+.Resize-v{/*重新調整尺忖 (垂直)*/
+    resize: vertical;
+    -moz-resize: vertical;
+}
+.ws-normal{/*預設模式，多空白自動合併成1個*/
+    white-space:normal;
+}
+.ws-nowrap,.t-exceed{/*強制不換行*/
+    white-space:nowrap;
+}
+.ws-pre{/*保留原始內容,換行以\n方式*/
+    white-space:pre;
+}
+.ws-p-l{/*多空白自動合併,超過寬度或\n符號自動換行*/
+    white-space:pre-line;
+}
+.ws-p-w{/*不合併連續的空白,超過寬度自動換行*/
+    white-space:pre-wrap;
+}
+.TextOverflow-e,.t-exceed{ /*文本省略號*/
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+/*文本對齊*/
+.t-align-c{
+   text-align: center; 
+}
+.t-align-l{
+   text-align: left; 
+}
+.t-align-r{
+   text-align: right;
+}
+.t-align-j{
+   text-align: justify;
+}

@@ -98,6 +98,7 @@ select::-ms-expand {
 .FDRow, .FDColumn, .FDRowRwd, .FDColumnRwd, .dpflex {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 .FDRow {
